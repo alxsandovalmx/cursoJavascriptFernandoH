@@ -18,8 +18,8 @@
     <div class="row mt-2">
         <div id="divBotones" class="col text-center">
             <button id="btnNuevo" class="btn btn-danger">NUEVO JUEGO</button>
-            <button id="btnPedir" class="btn btn-primary" disabled="disabled">PEDIR CARTA</button>
-            <button id="btnDetener" class="btn btn-primary" disabled="disabled">DETENER</button>
+            <button id="btnPedir" disabled="disabled" class="btn btn-primary">PEDIR CARTA</button>
+            <button id="btnDetener" disabled="disabled" class="btn btn-primary">DETENER</button>
         </div>
     </div>
     <div class="row container">
@@ -27,9 +27,6 @@
             <h1>Jugador 1 - <small> 0 </small></h1>
             <div id="jugador-cartas" class="divCartas">
                 <!-- <img class="carta" src="assets/cartas/10C.png"> -->
-                <!-- <img class="carta" src="assets/cartas/10C.png">
-                <img class="carta" src="assets/cartas/10C.png">
-                <img class="carta" src="assets/cartas/10C.png"> -->
             </div>
         </div>
     </div>
@@ -38,9 +35,6 @@
             <h1>Computadora - <small> 0 </small></h1>
             <div id="computadora-cartas" class="divCartas">
                 <!-- <img class="carta" src="assets/cartas/10H.png"> -->
-                <!-- <img class="carta" src="assets/cartas/10H.png">
-                <img class="carta" src="assets/cartas/10H.png">
-                <img class="carta" src="assets/cartas/10H.png"> -->
             </div>
         </div>
     </div>
@@ -49,8 +43,14 @@
     <script src="assets/js/juego.js"></script>
 
     <script>
-            console.log( miJuegoModulo );
+        // console.log( miJuegoModulo );
+        // miJuegoModulo.nuevoJuego();
+
+        // Inicializar juego
+        document.querySelector('#btnNuevo').addEventListener('click', () => {
             miJuegoModulo.nuevoJuego();
+        })
+
     </script>
 
 </body>

@@ -8,34 +8,23 @@ Como las cartas estan en ingles, asi se deben manejar internamente
 
 // Sintaxis del Patron Modulo
 const miJuegoModulo = ( () => {
-    // Validad el codigo 
+    // Valida el codigo 
     'use strict'
     
-    // const personajes = ['Ana', 'Mercy', 'Mia'];
-    // console.log( personajes );
-    let     deck = [];
+    // Manejo de las cartas
+    let     deck = [],
+            puntosJugadores = [];
+
     const   tipos = ['C', 'D', 'H', 'S'],
             especiales = ['A', 'J', 'Q', 'K'];
     
-    // let puntosJugador = 0,
-    //     puntosComputadora = 0;
-
-    let puntosJugadores = [];
-    
     // Rerefencias del HTML
     const   btnPedir = document.querySelector('#btnPedir'),
-    btnDetener = document.querySelector('#btnDetener'),
-    btnNuevo = document.querySelector('#btnNuevo');
+            btnDetener = document.querySelector('#btnDetener'),
+            btnNuevo = document.querySelector('#btnNuevo'),
+            divCartasJugadores = document.querySelectorAll ('.divCartas');
     
-    // console.log ( btnPedir );
     let     puntosHTML = document.querySelectorAll('small');
-
-    const divCartasJugadores = document.querySelectorAll ('.divCartas');
-    
-    // const   divCartasJugador = document.querySelector('#jugador-cartas'),
-    // divCartasComputadora = document.querySelector('#computadora-cartas');
-    
-    btnDetener.disabled = true;
     
     // Esta funcion inicia el juego con el # de jugadores
     const inicializarJuego = ( numJugadores = 2 ) => {
@@ -48,10 +37,8 @@ const miJuegoModulo = ( () => {
             divCartasJugadores[i].innerHTML = '';
         }
 
-        console.clear( );
-        
         btnPedir.disabled = false;
-        btnDetener.disabled = false;
+        btnDetener.disabled = true;
 
     }
 
@@ -83,44 +70,18 @@ const miJuegoModulo = ( () => {
             throw 'No hay cartas en el deck'
         }
 
-        //console.log(deck);
-        //console.log(carta); // Debe ser de la baraja
         return deck.pop();
     }
-    
-    // Este ciclo es para pedir una carta hasta agotarlas
-    /*
-    for (let i=0; i<=51; i++){
-        pedirCarta ();
-    }
-    */
-    
-    // pedirCarta();
     
     // Esta funcion sirve para obtener una carte del Deck
     const valorCarta = (carta) => {
         const valor = carta.substring(0, carta.length - 1);
-        /*
-            let puntos = 0;
-            console.log( valor );
-        
-            if ( isNaN( valor ) ){
-                // console.log( 'No es un numero' );
-                puntos = ( valor === 'A') ? 11 : 10;
-            }
-            else {
-                // console.log( 'Es un numero' );
-                puntos = valor * 1; // Multiplicar por 1 convierte a numero
-            }
-            console.log( puntos );
-        */
+
+        // Se valida si no es un numero valido
         return (isNaN(valor)) ?
             (valor === 'A' ? 11 : 10)
             : valor * 1;
     }
-    
-    //const valor = valorCarta ( pedirCarta() );
-    // console.log( valor );
     
     // En JS un color morado es un numero y gris es un string
     
@@ -134,6 +95,7 @@ const miJuegoModulo = ( () => {
     }
 
     const crearCarta = (carta, turno)=> {
+
         const imgCarta = document.createElement('img');
         imgCarta.src = `assets/cartas/${carta}.png`;
         imgCarta.classList.add('carta')
@@ -174,38 +136,33 @@ const miJuegoModulo = ( () => {
             puntosComputadora = acumularPuntos ( carta, puntosJugadores.length-1 );
             crearCarta (carta,puntosJugadores.length-1);
     
-    
         } while ( (puntosComputadora < puntosMinimos) && (puntosMinimos <=21) );
-    
 
+        determinarGanador();
     
     }
-    
     
     // Para escuchar un evento
     btnPedir.addEventListener('click', () => {
     
         const carta = pedirCarta();
-        //console.log(  carta );
 
         const puntosJugador = acumularPuntos ( carta, 0);
         crearCarta (carta,0);
     
         if (puntosJugador > 21) {
             btnDetener.disabled = true;
-            console.warn('Haz perdido!')
             btnPedir.disabled = true; // Desactiva el boton
             turnoComputadora (puntosJugador); // Estan de manera global
         } else if (puntosJugador === 21) {
-            btnDetener.disabled = true;
             // console.warn ('Buen trabajo!')
+            btnDetener.disabled = true;
             btnPedir.disabled = true;
             turnoComputadora (puntosJugador); // Estan de manera global
-    
-            if (puntosComputadora !== 21){
-            }
+        } else{
+            btnDetener.disabled = false;
+            btnPedir.disabled = false;
         }
-    
     
     })
     
