@@ -18,14 +18,14 @@
     <div class="row mt-2">
         <div id="divBotones" class="col text-center">
             <button id="btnNuevo" class="btn btn-danger">NUEVO JUEGO</button>
-            <button id="btnPedir" class="btn btn-primary">PEDIR CARTA</button>
-            <button id="btnDetener" class="btn btn-primary">DETENER</button>
+            <button id="btnPedir" class="btn btn-primary" disabled="disabled">PEDIR CARTA</button>
+            <button id="btnDetener" class="btn btn-primary" disabled="disabled">DETENER</button>
         </div>
     </div>
     <div class="row container">
         <div class="col">
             <h1>Jugador 1 - <small> 0 </small></h1>
-            <div id="jugador-cartas">
+            <div id="jugador-cartas" class="divCartas">
                 <!-- <img class="carta" src="assets/cartas/10C.png"> -->
                 <!-- <img class="carta" src="assets/cartas/10C.png">
                 <img class="carta" src="assets/cartas/10C.png">
@@ -36,7 +36,7 @@
     <div class="row container mt-2">
         <div class="col">
             <h1>Computadora - <small> 0 </small></h1>
-            <div id="computadora-cartas">
+            <div id="computadora-cartas" class="divCartas">
                 <!-- <img class="carta" src="assets/cartas/10H.png"> -->
                 <!-- <img class="carta" src="assets/cartas/10H.png">
                 <img class="carta" src="assets/cartas/10H.png">
@@ -47,6 +47,11 @@
 
     <script src="assets/js/underscore-min.js"></script>
     <script src="assets/js/juego.js"></script>
+
+    <script>
+            console.log( miJuegoModulo );
+            miJuegoModulo.nuevoJuego();
+    </script>
 
 </body>
 </html>
