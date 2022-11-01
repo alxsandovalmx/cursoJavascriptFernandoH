@@ -179,9 +179,6 @@ const miJuegoModulo = ( () => {
         inicializarJuego();
 
     }) 
-    
-    // TODO Borrar
-    // turnoComputadora (21);
 
     return {
         nuevoJuego: inicializarJuego
