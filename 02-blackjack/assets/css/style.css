@@ -1,0 +1,30 @@
+ /* Archivo de estilos */
+
+/* Estilo predeterminado */
+ html, body {
+    margin: 0px;
+    background-color: #2F4F30;
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.carta {
+    position: relative;
+    width: 150px;
+    left: 100px;
+    margin-left: -75px;
+}
+
+#jugador-cartas, #computadora-cartas {
+    height: 240px;
+}
+
+
+

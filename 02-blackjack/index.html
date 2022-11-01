@@ -1,0 +1,52 @@
+<!-- El archivo html inicial se llama normalmente index porque en el servidor donde se desplega el proyecto, normalmente se buscara un archivo index.html, pero esto depende del hosting -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blackjack</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Relacionamos el archivo de estilos css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="titulo">
+        Blackjack
+    </header>
+    <div class="row mt-2">
+        <div id="divBotones" class="col text-center">
+            <button id="btnNuevo" class="btn btn-danger">NUEVO JUEGO</button>
+            <button id="btnPedir" class="btn btn-primary">PEDIR CARTA</button>
+            <button id="btnDetener" class="btn btn-primary">DETENER</button>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col">
+            <h1>Jugador 1 - <small> 0 </small></h1>
+            <div id="jugador-cartas">
+                <!-- <img class="carta" src="assets/cartas/10C.png"> -->
+                <!-- <img class="carta" src="assets/cartas/10C.png">
+                <img class="carta" src="assets/cartas/10C.png">
+                <img class="carta" src="assets/cartas/10C.png"> -->
+            </div>
+        </div>
+    </div>
+    <div class="row container mt-2">
+        <div class="col">
+            <h1>Computadora - <small> 0 </small></h1>
+            <div id="computadora-cartas">
+                <!-- <img class="carta" src="assets/cartas/10H.png"> -->
+                <!-- <img class="carta" src="assets/cartas/10H.png">
+                <img class="carta" src="assets/cartas/10H.png">
+                <img class="carta" src="assets/cartas/10H.png"> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/underscore-min.js"></script>
+    <script src="assets/js/juego.js"></script>
+
+</body>
+</html>
