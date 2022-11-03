@@ -1,3 +1,3 @@
 # cursoJavascriptFernandoH
 
-# Este es el codigo del juego de BlackJack creado en Javascript
+# Este Repositorio contiene todos los archivos, proyectos o notas del curso: JavaScript Moderno: Guía para dominar el lenguaje
