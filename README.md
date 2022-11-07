@@ -15,3 +15,4 @@ Contenido:
 
 - **04-ToDo:** Creacion de una aplicacion web de lista de tareas con webpack y todo los conocimientos previos, adicionalmente, map(), filter(), forEach(), etc.
 
+- **05-Calbacks y Promesas:** Callbacks, Callback Hell, Promesas, Promise.all, Promise.catch, Promise.race, Async, Await, for await, if await, etc.
