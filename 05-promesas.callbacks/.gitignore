@@ -1,0 +1,3 @@
+# Ignorare los archivos de desarrollo
+node_modules
+dist
