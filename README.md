@@ -20,5 +20,8 @@ Contenido:
 - **06-hhtp:** Fetch, http-provider, Manejo del DOM, CRUD con HTTP Request, Postman, Cloudinary, etc.
 
 #### ¡Terminé! 😎
+
+[Link del reconocimiento](https://www.udemy.com/certificate/UC-aa88b91a-b010-44e1-8a70-e28a3e42347c/)
+
 **08/Nov/2022 - 16:15 hrs** <br>
 **Tijuana, B.C., México**
