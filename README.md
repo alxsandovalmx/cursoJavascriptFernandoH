@@ -11,6 +11,9 @@ Contenido:
 
 - **02-blackjack:** Uso del DOM, eventos, Patron Modulo, optimizaciones, clases, etc.
 
+    [Link del Proyecto Blackjack](https://alxsandoval.github.io/blackjack/)
+
+
 - **03-webpack-inicial**: Node, NPM, Webpack, Babel, Modo Produccion/Desarrollo, Git, Github, etc.
 
 - **04-ToDo:** Creacion de una aplicacion web de lista de tareas con webpack y todo los conocimientos previos, adicionalmente, map(), filter(), forEach(), etc.
