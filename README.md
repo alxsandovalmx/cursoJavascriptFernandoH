@@ -26,7 +26,9 @@ Contenido:
 
 #### ¡Terminé! 😎
 
-[Link del reconocimiento](https://www.udemy.com/certificate/UC-aa88b91a-b010-44e1-8a70-e28a3e42347c/)
+[Link del PDF con las Notas del Curso](https://n9.cl/8l0oi)
+
+[Link del Certificado de Finalización](https://www.udemy.com/certificate/UC-aa88b91a-b010-44e1-8a70-e28a3e42347c/)
 
 **08/Nov/2022 - 16:15 hrs** <br>
 **Tijuana, B.C., México**
