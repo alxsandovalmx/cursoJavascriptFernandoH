@@ -13,8 +13,12 @@ Contenido:
 
     [Link del Proyecto Blackjack](https://alxsandoval.github.io/blackjack/)
 
-
 - **03-webpack-inicial**: Node, NPM, Webpack, Babel, Modo Produccion/Desarrollo, Git, Github, etc.
+
+- **03-blackjack-vite**: Vite, Node y JSDoc.
+
+    [Link del Proyecto Blackjack con Vite](https://blackjack-v.netlify.app)
+
 
 - **04-ToDo:** Creacion de una aplicacion web de lista de tareas con webpack y todo los conocimientos previos, adicionalmente, map(), filter(), forEach(), etc.
 
